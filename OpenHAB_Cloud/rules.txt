@@ -1,0 +1,12 @@
+rule "alarm"
+when
+    Item LED changed
+then
+    if (LED.state== ON){
+       postUpdate(Alarm, "EMERGENCY!")
+       playSound("alarm.mp3");
+    }
+    else {
+       postUpdate(Alarm, "SAFE")
+    }
+end

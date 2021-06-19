@@ -1,0 +1,223 @@
+{
+    "dashboards": [
+        {
+            "id": "Sensor DHT",
+            "name": "Sensor DHT",
+            "widgets": [
+                {
+                    "name": "Temperatur",
+                    "sizeX": 10,
+                    "sizeY": 3,
+                    "item": null,
+                    "type": "chart",
+                    "row": 2,
+                    "col": 2,
+                    "charttype": "interactive",
+                    "service": "jdbc",
+                    "period": "h",
+                    "axis": {
+                        "y": {
+                            "min": 22,
+                            "max": 32
+                        },
+                        "y2": {
+                            "enabled": true,
+                            "min": 60,
+                            "max": 100
+                        }
+                    },
+                    "series": [
+                        {
+                            "axis": "y",
+                            "display_line": true,
+                            "display_area": false,
+                            "item": "GenericMQTTThing_Temperatur",
+                            "name": "Temperatur",
+                            "color": "#FF6600"
+                        },
+                        {
+                            "axis": "y2",
+                            "display_line": true,
+                            "display_area": false,
+                            "item": "GenericMQTTThing_Kelembapan",
+                            "name": "Kelembapan"
+                        }
+                    ],
+                    "liveUpdates": {
+                        "enabled": true
+                    }
+                },
+                {
+                    "name": "",
+                    "sizeX": 5,
+                    "sizeY": 1,
+                    "item": "GenericMQTTThing_Temperatur",
+                    "type": "dummy",
+                    "row": 1,
+                    "col": 2,
+                    "font_size": "20",
+                    "nolinebreak": false,
+                    "unit": "",
+                    "useserverformat": false,
+                    "backdrop_center": true,
+                    "icon_size": 32,
+                    "iconset": "smarthome-set",
+                    "icon": "temperature",
+                    "format": "%.2f °C"
+                },
+                {
+                    "name": "",
+                    "sizeX": 5,
+                    "sizeY": 1,
+                    "item": "GenericMQTTThing_Kelembapan",
+                    "type": "dummy",
+                    "font_size": "20",
+                    "unit": "%",
+                    "format": "%.1f",
+                    "useserverformat": false,
+                    "row": 1,
+                    "col": 7,
+                    "backdrop_center": true,
+                    "iconset": "smarthome-set",
+                    "icon": "drop",
+                    "icon_size": 32
+                },
+                {
+                    "name": "LED",
+                    "sizeX": 2,
+                    "sizeY": 1,
+                    "item": "LED",
+                    "type": "switch",
+                    "row": 3,
+                    "col": 0,
+                    "hidelabel": false,
+                    "hideonoff": false,
+                    "icon_size": "60"
+                },
+                {
+                    "name": "Status",
+                    "sizeX": 2,
+                    "sizeY": 1,
+                    "item": "Alarm",
+                    "type": "dummy",
+                    "row": 4,
+                    "col": 0,
+                    "font_size": "25"
+                },
+                {
+                    "name": "",
+                    "sizeX": 2,
+                    "sizeY": 2,
+                    "item": null,
+                    "type": "clock",
+                    "row": 1,
+                    "col": 0,
+                    "mode": "Analog",
+                    "analog_theme": "dark",
+                    "font_size": "20"
+                },
+                {
+                    "name": "D  A  S  H  B  O  A  R  D",
+                    "sizeX": 12,
+                    "sizeY": 1,
+                    "item": null,
+                    "type": "label",
+                    "row": 0,
+                    "col": 0,
+                    "foreground": "#FF6600",
+                    "font_size": "40"
+                }
+            ],
+            "row": 0,
+            "col": 0,
+            "$$hashKey": "object:6"
+        },
+        {
+            "id": "Bacnet Simulator",
+            "name": "Bacnet Simulator",
+            "widgets": [
+                {
+                    "name": "Analog Input",
+                    "sizeX": 10,
+                    "sizeY": 4,
+                    "item": null,
+                    "type": "chart",
+                    "row": 1,
+                    "col": 2,
+                    "charttype": "interactive",
+                    "service": "jdbc",
+                    "period": "4M",
+                    "axis": {
+                        "y": {}
+                    },
+                    "series": [
+                        {
+                            "axis": "y",
+                            "display_line": true,
+                            "display_area": false,
+                            "item": "Bacnet_simulator_Analog_input",
+                            "name": "Analog Input"
+                        }
+                    ],
+                    "liveUpdates": {
+                        "enabled": true
+                    }
+                },
+                {
+                    "name": "State",
+                    "sizeX": 2,
+                    "sizeY": 2,
+                    "item": "Bacnet_simulator_State",
+                    "type": "switch",
+                    "row": 1,
+                    "col": 0
+                },
+                {
+                    "name": "Set Temp",
+                    "sizeX": 2,
+                    "sizeY": 2,
+                    "item": "Bacnet_simulator_Setting_temp",
+                    "type": "knob",
+                    "row": 3,
+                    "col": 0,
+                    "floor": 0,
+                    "ceil": 100,
+                    "step": 1,
+                    "fontSize": null,
+                    "subTextEnabled": false,
+                    "scaleEnabled": true,
+                    "rangesTextColorMatching": true,
+                    "ranges": []
+                },
+                {
+                    "name": "BACNET SIMULATOR",
+                    "sizeX": 12,
+                    "sizeY": 1,
+                    "item": null,
+                    "type": "label",
+                    "row": 0,
+                    "col": 0,
+                    "font_size": "40"
+                }
+            ],
+            "row": 1,
+            "col": 0,
+            "$$hashKey": "object:7"
+        },
+        {
+            "id": "Dummy",
+            "name": "Dummy",
+            "widgets": [],
+            "row": 2,
+            "col": 0,
+            "$$hashKey": "object:8"
+        }
+    ],
+    "menucolumns": 1,
+    "settings": {
+        "theme": "orange-tree",
+        "show_header_clock": false,
+        "background_image": ""
+    },
+    "customwidgets": {}
+}

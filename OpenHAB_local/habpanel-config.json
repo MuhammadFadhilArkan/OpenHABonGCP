@@ -1,0 +1,441 @@
+{
+    "dashboards": [
+        {
+            "id": "Bacnet_TF",
+            "name": "Bacnet_TF",
+            "widgets": [
+                {
+                    "name": "SetPoint_status",
+                    "sizeX": 6,
+                    "sizeY": 4,
+                    "item": "SetPoint_status",
+                    "type": "chart",
+                    "row": 1,
+                    "col": 0,
+                    "charttype": "interactive",
+                    "service": "jdbc",
+                    "period": "h",
+                    "axis": {
+                        "y": {
+                            "includezero": false,
+                            "min": 10,
+                            "max": 32
+                        }
+                    },
+                    "series": [
+                        {
+                            "axis": "y",
+                            "display_line": true,
+                            "display_area": false,
+                            "item": "SetPoint_status",
+                            "name": "SetPoint_status"
+                        }
+                    ],
+                    "liveUpdates": {
+                        "enabled": true
+                    },
+                    "$$hashKey": "object:32"
+                },
+                {
+                    "name": "RoomTemperature_status",
+                    "sizeX": 6,
+                    "sizeY": 4,
+                    "item": null,
+                    "type": "chart",
+                    "row": 1,
+                    "col": 6,
+                    "charttype": "interactive",
+                    "service": "jdbc",
+                    "period": "h",
+                    "axis": {
+                        "y": {
+                            "min": 10,
+                            "max": 32
+                        }
+                    },
+                    "series": [
+                        {
+                            "axis": "y",
+                            "display_line": true,
+                            "display_area": false,
+                            "item": "RoomTemperature_status",
+                            "name": "RoomTemperature_status"
+                        }
+                    ],
+                    "liveUpdates": {
+                        "enabled": true
+                    },
+                    "$$hashKey": "object:33"
+                },
+                {
+                    "name": "BACNET TF",
+                    "sizeX": 12,
+                    "sizeY": 1,
+                    "item": null,
+                    "type": "label",
+                    "row": 0,
+                    "col": 0,
+                    "foreground": "#FF6600",
+                    "font_size": "40",
+                    "$$hashKey": "object:34"
+                }
+            ],
+            "row": 0,
+            "col": 0,
+            "$$hashKey": "object:21"
+        },
+        {
+            "id": "BACNET TF",
+            "name": "BACNET TF",
+            "widgets": [
+                {
+                    "name": "SetPoint",
+                    "sizeX": 2,
+                    "sizeY": 2,
+                    "item": "SetPoint_status",
+                    "type": "dummy",
+                    "row": 1,
+                    "col": 4,
+                    "$$hashKey": "object:70"
+                },
+                {
+                    "name": "RoomTemperature",
+                    "sizeX": 2,
+                    "sizeY": 2,
+                    "item": "RoomTemperature_status",
+                    "type": "dummy",
+                    "row": 1,
+                    "col": 6,
+                    "format": "%.2f °C",
+                    "useserverformat": false,
+                    "$$hashKey": "object:71"
+                },
+                {
+                    "name": "ErrorAddress",
+                    "sizeX": 2,
+                    "sizeY": 2,
+                    "item": "ErrorAddress",
+                    "type": "dummy",
+                    "row": 3,
+                    "col": 4,
+                    "$$hashKey": "object:72"
+                },
+                {
+                    "name": "ErrorCode",
+                    "sizeX": 2,
+                    "sizeY": 2,
+                    "item": "ErrorCode",
+                    "type": "dummy",
+                    "row": 3,
+                    "col": 6,
+                    "$$hashKey": "object:73"
+                },
+                {
+                    "name": "SetPoint",
+                    "sizeX": 4,
+                    "sizeY": 1,
+                    "item": "SetPoint_command",
+                    "type": "slider",
+                    "row": 6,
+                    "col": 4,
+                    "floor": 16,
+                    "ceil": 32,
+                    "step": 1,
+                    "$$hashKey": "object:74"
+                },
+                {
+                    "name": "OnOff",
+                    "sizeX": 2,
+                    "sizeY": 2,
+                    "item": "OnOff_Status",
+                    "type": "dummy",
+                    "row": 1,
+                    "col": 0,
+                    "font_size": "",
+                    "$$hashKey": "object:75"
+                },
+                {
+                    "name": "Thermostat",
+                    "sizeX": 2,
+                    "sizeY": 2,
+                    "item": "ThermostatON",
+                    "type": "dummy",
+                    "row": 1,
+                    "col": 2,
+                    "$$hashKey": "object:76"
+                },
+                {
+                    "name": "FilterSign",
+                    "sizeX": 2,
+                    "sizeY": 2,
+                    "item": "FilterSign",
+                    "type": "dummy",
+                    "row": 3,
+                    "col": 0,
+                    "$$hashKey": "object:77"
+                },
+                {
+                    "name": "ErrorActive",
+                    "sizeX": 2,
+                    "sizeY": 2,
+                    "item": "ErrorActive",
+                    "type": "dummy",
+                    "row": 3,
+                    "col": 2,
+                    "$$hashKey": "object:78"
+                },
+                {
+                    "name": "OnOff",
+                    "sizeX": 4,
+                    "sizeY": 1,
+                    "item": "OnOff_command",
+                    "type": "switch",
+                    "row": 6,
+                    "col": 0,
+                    "$$hashKey": "object:79"
+                },
+                {
+                    "name": "FilterReset",
+                    "sizeX": 2,
+                    "sizeY": 1,
+                    "item": "FilterReset",
+                    "type": "switch",
+                    "row": 7,
+                    "col": 2,
+                    "$$hashKey": "object:80"
+                },
+                {
+                    "name": "OccupiedCoolSetPoint",
+                    "sizeX": 2,
+                    "sizeY": 1,
+                    "item": "OCCUPIEDCOOLSETPOINT",
+                    "type": "slider",
+                    "row": 8,
+                    "col": 4,
+                    "floor": 16,
+                    "ceil": 32,
+                    "step": 1,
+                    "$$hashKey": "object:81"
+                },
+                {
+                    "name": "UnOccupiedCoolSetPoint",
+                    "sizeX": 2,
+                    "sizeY": 1,
+                    "item": "UNOCCUPIEDCOOLSETPOINT",
+                    "type": "slider",
+                    "row": 9,
+                    "col": 4,
+                    "floor": 16.7,
+                    "ceil": 35,
+                    "step": 0.1,
+                    "$$hashKey": "object:82"
+                },
+                {
+                    "name": "OccupiedHeatSetPoint",
+                    "sizeX": 2,
+                    "sizeY": 1,
+                    "item": "OCCUPIEDHEATSETPOINT",
+                    "type": "slider",
+                    "row": 8,
+                    "col": 6,
+                    "floor": 16,
+                    "ceil": 32,
+                    "step": 1,
+                    "$$hashKey": "object:83"
+                },
+                {
+                    "name": "UnOccupiedHeatSetPoint",
+                    "sizeX": 2,
+                    "sizeY": 1,
+                    "item": "UNOCCUPIEDHEATSETPOINT",
+                    "type": "slider",
+                    "row": 9,
+                    "col": 6,
+                    "floor": 10,
+                    "ceil": 31.1,
+                    "step": 0.1,
+                    "$$hashKey": "object:84"
+                },
+                {
+                    "name": "OnTimeCounter",
+                    "sizeX": 4,
+                    "sizeY": 1,
+                    "item": "OnTimeCounter",
+                    "type": "slider",
+                    "row": 7,
+                    "col": 4,
+                    "floor": 0,
+                    "ceil": 200,
+                    "step": 1,
+                    "$$hashKey": "object:85"
+                },
+                {
+                    "name": "OccupancyContinuousCheck",
+                    "sizeX": 2,
+                    "sizeY": 2,
+                    "item": "OccupancyContinuousCheck",
+                    "type": "switch",
+                    "row": 8,
+                    "col": 0,
+                    "$$hashKey": "object:86"
+                },
+                {
+                    "name": "UnOccupiedDeadbandAction",
+                    "sizeX": 2,
+                    "sizeY": 2,
+                    "item": "UnoccupiedDeadbandAction",
+                    "type": "switch",
+                    "row": 8,
+                    "col": 2,
+                    "$$hashKey": "object:87"
+                },
+                {
+                    "name": "LockRemoteControl",
+                    "sizeX": 2,
+                    "sizeY": 1,
+                    "item": "LockRemoteControl",
+                    "type": "switch",
+                    "row": 7,
+                    "col": 0,
+                    "$$hashKey": "object:88"
+                },
+                {
+                    "name": "Mode",
+                    "sizeX": 2,
+                    "sizeY": 2,
+                    "item": "Mode_status",
+                    "type": "dummy",
+                    "row": 1,
+                    "col": 8,
+                    "$$hashKey": "object:89"
+                },
+                {
+                    "name": "FanSpeed",
+                    "sizeX": 2,
+                    "sizeY": 2,
+                    "item": "FanSpeed_status",
+                    "type": "dummy",
+                    "row": 1,
+                    "col": 10,
+                    "$$hashKey": "object:90"
+                },
+                {
+                    "name": "ErrorCodeM",
+                    "sizeX": 2,
+                    "sizeY": 2,
+                    "item": "ErrorCodeM",
+                    "type": "dummy",
+                    "row": 3,
+                    "col": 10,
+                    "$$hashKey": "object:91"
+                },
+                {
+                    "name": "AirDirectionUD",
+                    "sizeX": 2,
+                    "sizeY": 2,
+                    "item": "AirDirectionUD_status",
+                    "type": "dummy",
+                    "row": 3,
+                    "col": 8,
+                    "$$hashKey": "object:92"
+                },
+                {
+                    "name": "Mode",
+                    "sizeX": 2,
+                    "sizeY": 2,
+                    "item": "Mode_command",
+                    "type": "selection",
+                    "row": 6,
+                    "col": 8,
+                    "choices_columns": 4,
+                    "choices_source": "csv",
+                    "choices": "1,2,3,4",
+                    "no_squares": false,
+                    "keep_open": false,
+                    "no_highlight": false,
+                    "$$hashKey": "object:93"
+                },
+                {
+                    "name": "FanSpeed",
+                    "sizeX": 2,
+                    "sizeY": 2,
+                    "item": "FanSpeed_command",
+                    "type": "selection",
+                    "choices_columns": 4,
+                    "choices_source": "csv",
+                    "choices": "1,3,5,8",
+                    "row": 6,
+                    "col": 10,
+                    "$$hashKey": "object:94"
+                },
+                {
+                    "name": "AirDirectionUD",
+                    "sizeX": 2,
+                    "sizeY": 2,
+                    "item": "AirDirectionUD_command",
+                    "type": "selection",
+                    "choices_columns": 6,
+                    "choices_source": "csv",
+                    "choices": "1,2,3,4,5,8",
+                    "row": 8,
+                    "col": 8,
+                    "$$hashKey": "object:95"
+                },
+                {
+                    "name": "Occupancy",
+                    "sizeX": 2,
+                    "sizeY": 2,
+                    "item": "Occupancy",
+                    "type": "selection",
+                    "choices_columns": 3,
+                    "choices_source": "csv",
+                    "choices": "1,2,3",
+                    "row": 8,
+                    "col": 10,
+                    "$$hashKey": "object:96"
+                },
+                {
+                    "name": "STATUS",
+                    "sizeX": 12,
+                    "sizeY": 1,
+                    "item": null,
+                    "type": "label",
+                    "row": 0,
+                    "col": 0,
+                    "foreground": "#FF6600",
+                    "font_size": "40",
+                    "$$hashKey": "object:97"
+                },
+                {
+                    "name": "CONTROL",
+                    "sizeX": 12,
+                    "sizeY": 1,
+                    "item": null,
+                    "type": "label",
+                    "row": 5,
+                    "col": 0,
+                    "foreground": "#FF6600",
+                    "font_size": "40",
+                    "$$hashKey": "object:98"
+                }
+            ],
+            "row": 1,
+            "col": 0,
+            "$$hashKey": "object:22"
+        },
+        {
+            "id": "Dummy",
+            "name": "Dummy",
+            "widgets": [],
+            "row": 2,
+            "col": 0,
+            "$$hashKey": "object:23"
+        }
+    ],
+    "menucolumns": 1,
+    "settings": {
+        "theme": "orange-tree",
+        "background_image": ""
+    },
+    "customwidgets": {}
+}
